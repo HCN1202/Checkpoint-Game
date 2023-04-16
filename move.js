@@ -18,18 +18,18 @@ function move(element) {
   
         function moveCharacter(){ 
          
-                if(direction === 'west'){
+                if(direction === 'west' && finished == false){
                     x-=1
                 }
-                if(direction === 'north'){
+                if(direction === 'north'&& finished == false){
                     if(y<height*.6){
                     y+=1
                     }
                 }
-                if(direction === 'east'){
+                if(direction === 'east'&& finished == false){
                     x+=1
                 }
-                if(direction === 'south'){
+                if(direction === 'south'&& finished == false){
                     if(y>height*.1){
                     y-=1
                     }
@@ -59,7 +59,7 @@ function move(element) {
               if ( Math.abs(bobx - ax) <= 30 && Math.abs(boby-ay)<= 30 ||  Math.abs(bobx - bx) <= 30 && Math.abs(boby-by)<= 30 ||  Math.abs(bobx - cx) <= 30 && Math.abs(boby-cy)<= 30 ||  Math.abs(bobx - dx) <= 30 && Math.abs(boby-dy)<= 30){
                 //|| Math.abs(x - bx) <= 60 && Math.abs(y-by)<=60 || Math.abs(x - cx) <= 60 && Math.abs(y-cy)<=60 || Math.abs(x - dx) <= 60 && Math.abs(y-dy)<=60
                 document.getElementById("main").classList.add("terminate")
-                
+                finished = true
                 x = 100 
                 y = 300
                 var tryAgain = document.getElementById("tryAgain")
@@ -76,6 +76,7 @@ function move(element) {
                 x = 100 
                 y = 300
                 restart.addEventListener("click", clearGame)
+                finished = true
                 
             }
         
