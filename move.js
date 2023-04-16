@@ -19,7 +19,9 @@ function move(element) {
         function moveCharacter(){ 
          
                 if(direction === 'west' && finished == false){
+                    if(x>0){
                     x-=1
+                    }
                 }
                 if(direction === 'north'&& finished == false){
                     if(y<height*.6){
