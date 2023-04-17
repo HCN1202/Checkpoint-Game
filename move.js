@@ -74,11 +74,11 @@ function move(element) {
             if (x > finishline) {
                 
                 document.getElementById("main").classList.add("win")
-                
+                finished = true
                 x = 100 
                 y = 300
                 restart.addEventListener("click", clearGame)
-                finished = true
+                
                 
             }
         
