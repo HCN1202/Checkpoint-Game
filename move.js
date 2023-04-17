@@ -67,7 +67,6 @@ function move(element) {
                 var tryAgain = document.getElementById("tryAgain")
                 tryAgain.addEventListener("click", clearGame)
               }
-              console.log("x: "+x+",y:"+y+",ax:"+ax+",ay:"+ay)
               
             }
         
@@ -77,6 +76,7 @@ function move(element) {
                 finished = true
                 x = 100 
                 y = 300
+                var restart = document.getElementById("restart")
                 restart.addEventListener("click", clearGame)
                 
                 
