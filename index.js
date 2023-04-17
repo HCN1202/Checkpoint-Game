@@ -11,6 +11,7 @@ function clearGame(){
       
      document.getElementById("main").classList.remove("win")
      document.getElementById("main").classList.remove("terminate")
+     finished = false
     
 }
 
